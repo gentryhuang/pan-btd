@@ -119,7 +119,11 @@
     <img src="pp-tea.jpeg" id="logo">
 </div>
 
+<!--<canvas class="canvas" width="1820" height="905"></canvas>-->
 <canvas class="canvas" width="1820" height="905"></canvas>
+
+
+
 <p class="text" style="color: #ed3073;">
     世界已经有你
     <br/>
@@ -127,10 +131,11 @@
 </p>
 
 <p class="text-exr">
-    <a href="http://gentryhuang.com/lipstick/" target="_blank" style="position: fixed;right:10px;font-size: 6px;color: #ed3073;cursor: pointer;text-decoration: snow; display: inline-block;padding:3px;background-color: snow">喏，💄随便挑!</a>
+    <a href="http://gentryhuang.com/lipstick/" target="_blank" style="position: fixed;right:10px;font-size: 8px;color: #ed3073;cursor: pointer;text-decoration: snow; display: inline-block;padding:3px;background-color: snow">喏，💄随便挑!</a>
 </p>
 
 <script language="javascript">
+
     function show_date_time() {
         window.setTimeout("show_date_time()", 1000);
 
@@ -206,7 +211,7 @@
         init: function () {
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
-            S.UI.simulate("盼 盼|生日快乐|#countdown 3|#rectangle 18x18|#circle 16 |#time");
+            S.UI.simulate("盼 盼|生日快乐|#countdown 3|#rectangle 10x10|#circle 6 |#time");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -516,6 +521,8 @@
         }
 
         function setFontSize(s) {
+            // todo 这里人为控制画布大小
+            s=180;
             shapeContext.font = 'bold ' + s + 'px ' + fontFamily;
         }
 
